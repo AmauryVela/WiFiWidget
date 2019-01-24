@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="WiFiInfoExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connected" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="292" translatesAutoresizingMaskIntoConstraints="NO" id="RH9-sx-XuN">
+                                <rect key="frame" x="77" y="40" width="185" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WIFIIcon" translatesAutoresizingMaskIntoConstraints="NO" id="SAP-l1-RGc">
+                                <rect key="frame" x="16" y="15" width="40" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Djz-5g-qjA"/>
+                                    <constraint firstAttribute="height" constant="31" id="y3t-zs-wMB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="292" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
+                                <rect key="frame" x="77" y="9" width="185" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb9-FN-pYc">
+                                <rect key="frame" x="264" y="15" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="PhQ-8o-LsO"/>
+                                    <constraint firstAttribute="width" constant="35" id="Rgk-bP-6kJ"/>
+                                    <constraint firstAttribute="height" constant="35" id="ptz-kK-V33"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="SpeedTest"/>
+                                <connections>
+                                    <action selector="openSettingsApp:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="rFC-jo-F2i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="SAP-l1-RGc" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="16" id="8rw-4T-SJf"/>
+                            <constraint firstItem="Kb9-FN-pYc" firstAttribute="leading" secondItem="RH9-sx-XuN" secondAttribute="trailing" constant="2" id="CHO-tC-bc1"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="SAP-l1-RGc" secondAttribute="trailing" constant="21" id="FcZ-4Y-NQw"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="SAP-l1-RGc" secondAttribute="trailing" constant="21" id="H0v-XR-o3z"/>
+                            <constraint firstItem="RH9-sx-XuN" firstAttribute="leading" secondItem="SAP-l1-RGc" secondAttribute="trailing" constant="21" id="Nbg-xk-ZLb"/>
+                            <constraint firstItem="RH9-sx-XuN" firstAttribute="top" secondItem="GcN-lo-r42" secondAttribute="bottom" constant="8" id="ScJ-rI-J2J"/>
+                            <constraint firstItem="Kb9-FN-pYc" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="15" id="WWo-m7-ADe"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="Kb9-FN-pYc" secondAttribute="trailing" constant="21" id="jyd-mc-95i"/>
+                            <constraint firstItem="RH9-sx-XuN" firstAttribute="top" secondItem="GcN-lo-r42" secondAttribute="bottom" constant="8" id="lb3-DD-MeV"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="9" id="mb3-KM-ukb"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="GcN-lo-r42" secondAttribute="trailing" constant="58" id="ufC-AZ-sf2"/>
+                            <constraint firstItem="SAP-l1-RGc" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="15" id="w8U-AL-E6o"/>
+                            <constraint firstItem="RH9-sx-XuN" firstAttribute="trailing" secondItem="ssy-KU-ocm" secondAttribute="trailing" constant="-58" id="yax-sJ-FEC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="60"/>
+                    <connections>
+                        <outlet property="iconImageview" destination="SAP-l1-RGc" id="8lH-Av-1hr"/>
+                        <outlet property="wifiSSIDLabel" destination="GcN-lo-r42" id="0nj-2j-8hl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54.399999999999999" y="26.986506746626688"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SpeedTest" width="118" height="116"/>
+        <image name="WIFIIcon" width="256" height="256"/>
+    </resources>
+</document>
